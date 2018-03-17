@@ -38,6 +38,14 @@
 </head>
 
 <body>
+  <script type="text/javascript">
+    function show_confirm() {
+      var r = confirm("即将转调到腾讯微云网盘，是否继续？");
+      if (r == true) {
+        window.location.href = "https://share.weiyun.com/5ZV2lZE"
+      }
+    }
+  </script>
   <div style="position:relative; z-index:1;">
     <div height="10em" style="text-align:center;padding-top: 1em;padding-left: 1em;padding-right: 1em;">
       <embed src="footage/brand.svg" type="image/svg+xml" />
@@ -50,7 +58,8 @@
           <div id="fh5co-board" data-columns>
             <div class=item>
               <div class=fh5co-desc>直接点击图片，长按大图保存到手机即为原图。
-                <a href="https://share.weiyun.com/5ZV2lZE">如需查看更多图片，请点击这里</a>
+                <!-- <input type="text"href="https://share.weiyun.com/5ZV2lZE" onclick="show_confirm()" value="如需查看更多图片，请点击这里" />-->
+                <a onclick="show_confirm()">如需查看更多图片，请点击这里</a>
               </div>
             </div>
             <div class=item>
@@ -277,18 +286,14 @@
               </div>
               <div class=fh5co-desc>IMG_4808.jpg</div>
             </div>
-
-
           </div>
         </div>
       </div>
     </div>
-
   </div>
   <div style="overflow: hidden;">
     <audio src="footage/Background.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>
   </div>
-
   <script src="js/background.js"></script>
   <canvas class="drawer" width="395" height="720"></canvas>
 
@@ -337,8 +342,6 @@
     }
     audioAutoPlay('Jaudio');
   </script>
-
-
 </body>
 
 </html>
